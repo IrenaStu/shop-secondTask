@@ -43,7 +43,7 @@ public class WearHouseService {
     updateProductQuantity(product);
   }
 
-  private void updateProductQuantity(Product product) {
+  private  synchronized  void updateProductQuantity(Product product) {
     Integer newQuantity = wearHouseStock.getStockMap().get(product);
     if (newQuantity != null) {
       product.setQuantity(newQuantity);
