@@ -1,6 +1,7 @@
 package org.example.user;
 
 import lombok.AllArgsConstructor;
+import lombok.Builder;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
@@ -9,11 +10,17 @@ import lombok.Setter;
 @Setter
 @NoArgsConstructor
 @AllArgsConstructor
-public class User {
-    private long userId;
+@Builder
+public class Customer {
+    private Long userId;
     private String firstName;
     private String lastName;
     private String  email;
-    private String password;
+
+
+    @Override
+    public String toString() {
+        return firstName+" "+lastName;
+    }
 
 }
