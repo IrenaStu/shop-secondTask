@@ -12,15 +12,13 @@ import lombok.Setter;
 @AllArgsConstructor
 @Builder
 public class Customer {
-    private Long userId;
-    private String firstName;
-    private String lastName;
-    private String  email;
+  private Long userId;
+  private String firstName;
+  private String lastName;
+  private String email;
 
-
-    @Override
-    public String toString() {
-        return firstName+" "+lastName;
-    }
-
+  @Override
+  public String toString() {
+    return firstName + " " + lastName;
+  }
 }
